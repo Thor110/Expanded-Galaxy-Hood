@@ -1,0 +1,22 @@
+215 unique characters...
+
+find a way to minimise this or alternate appearance.2da files for bossr/kotor
+
+723 in the appearance.2da for kotor with bossr installed
+
+215 on top of the existing 508
+
+this is too much as the limit has already been reached in the kotor 2 appearance 2da
+
+509-723
+
+
+global character gff files altered
+
+daemon.utc
+
+703 changed to 697 for now
+
+bos_charlie.utc
+
+715 changed to 696 for now

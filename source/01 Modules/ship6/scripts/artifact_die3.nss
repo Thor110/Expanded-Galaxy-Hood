@@ -1,0 +1,41 @@
+void main() {
+	ActionPauseConversation();
+	ActionWait(9.0);
+	object oPC = GetFirstPC();
+	int nCurHP = GetCurrentHitPoints(oPC);
+	int nMaxHP = GetMaxHitPoints(oPC);
+	int int5 = (nCurHP / nMaxHP);
+	effect efVisual = EffectVisualEffect(3016, 0);
+	effect effect3 = EffectVisualEffect(3010, 0);
+	effect effect5 = EffectVisualEffect(3006, 0);
+	object oPoint_artifact2 = GetObjectByTag("point_artifact2", 0);
+	object oBolt1 = GetObjectByTag("bolt1", 0);
+	object oBolt2 = GetObjectByTag("bolt2", 0);
+	object oBolt3 = GetObjectByTag("bolt3", 0);
+	object oBolt4 = GetObjectByTag("bolt4", 0);
+	object oBolt5 = GetObjectByTag("bolt5", 0);
+	object oBolt6 = GetObjectByTag("bolt6", 0);
+	object oBolt7 = GetObjectByTag("bolt7", 0);
+	object oBolt8 = GetObjectByTag("bolt8", 0);
+	location location1 = GetLocation(oBolt1);
+	effect efBeam = EffectBeam(2029, oPoint_artifact2, 0, 0);
+	effect effect9 = EffectBeam(2038, oPoint_artifact2, 0, 0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt1", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt1", 0), 99.0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt2", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt2", 0), 99.0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt3", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt3", 0), 99.0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt4", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt4", 0), 99.0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt5", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt5", 0), 99.0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt6", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt6", 0), 99.0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt7", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt7", 0), 99.0);
+	ApplyEffectToObject(1, efBeam, GetObjectByTag("bolt8", 0), 99.0);
+	ApplyEffectToObject(1, effect9, GetObjectByTag("bolt8", 0), 99.0);
+	ActionResumeConversation();
+}
+

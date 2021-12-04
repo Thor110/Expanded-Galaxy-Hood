@@ -1,0 +1,45 @@
+void main() {
+	ActionPauseConversation();
+	ActionWait(7.0);
+	object oPC = GetFirstPC();
+	int nCurHP = GetCurrentHitPoints(oPC);
+	int nMaxHP = GetMaxHitPoints(oPC);
+	int int5 = (nCurHP / nMaxHP);
+	effect efVisual = EffectVisualEffect(3016, 0);
+	effect effect3 = EffectVisualEffect(3010, 0);
+	effect effect5 = EffectVisualEffect(3006, 0);
+	object oPoint_artifact2 = GetObjectByTag("point_artifact2", 0);
+	object oPoint_artifact = GetObjectByTag("point_artifact", 0);
+	object oArtifact = GetObjectByTag("artifact", 0);
+	object oBolt1 = GetObjectByTag("bolt1", 0);
+	object oBolt2 = GetObjectByTag("bolt2", 0);
+	object oBolt3 = GetObjectByTag("bolt3", 0);
+	object oBolt4 = GetObjectByTag("bolt4", 0);
+	object oBolt5 = GetObjectByTag("bolt5", 0);
+	object oBolt6 = GetObjectByTag("bolt6", 0);
+	object oBolt7 = GetObjectByTag("bolt7", 0);
+	object oBolt8 = GetObjectByTag("bolt8", 0);
+	location location1 = GetLocation(oPoint_artifact2);
+	location location3 = GetLocation(oPoint_artifact);
+	location location5 = GetLocation(oArtifact);
+	ApplyEffectAtLocation(0, efVisual, location1, 0.0);
+	ApplyEffectAtLocation(0, effect3, location1, 0.0);
+	DelayCommand(1.5, ApplyEffectAtLocation(0, efVisual, location3, 0.0));
+	DelayCommand(1.5, ApplyEffectAtLocation(0, effect3, location3, 0.0));
+	DelayCommand(3.0, ApplyEffectAtLocation(0, efVisual, location5, 0.0));
+	DelayCommand(3.0, ApplyEffectAtLocation(0, effect3, location5, 0.0));
+	AssignCommand(oPoint_artifact2, ActionDoCommand(DestroyObject(oPoint_artifact2, 0.0, 0, 0.0)));
+	AssignCommand(oBolt1, ActionDoCommand(DestroyObject(oBolt1, 0.0, 0, 0.0)));
+	AssignCommand(oBolt2, ActionDoCommand(DestroyObject(oBolt2, 0.0, 0, 0.0)));
+	AssignCommand(oBolt3, ActionDoCommand(DestroyObject(oBolt3, 0.0, 0, 0.0)));
+	AssignCommand(oBolt4, ActionDoCommand(DestroyObject(oBolt4, 0.0, 0, 0.0)));
+	AssignCommand(oBolt5, ActionDoCommand(DestroyObject(oBolt5, 0.0, 0, 0.0)));
+	AssignCommand(oBolt6, ActionDoCommand(DestroyObject(oBolt6, 0.0, 0, 0.0)));
+	AssignCommand(oBolt7, ActionDoCommand(DestroyObject(oBolt7, 0.0, 0, 0.0)));
+	AssignCommand(oBolt8, ActionDoCommand(DestroyObject(oBolt8, 0.0, 0, 0.0)));
+	DelayCommand(1.0, ApplyEffectAtLocation(0, effect5, location5, 0.0));
+	DelayCommand(1.0, AssignCommand(oArtifact, ActionDoCommand(DestroyObject(oArtifact, 0.0, 0, 0.0))));
+	DelayCommand(4.0, ExecuteScript("artifact_bla", OBJECT_SELF, 0xFFFFFFFF));
+	ActionResumeConversation();
+}
+

@@ -1,0 +1,46 @@
+void main() {
+	object oPC = GetFirstPC();
+	vector struct2 = Vector(130.71, 94.54, 0.0);
+	location location1 = Location(struct2, 0.0);
+	vector struct4 = Vector(128.1, 93.01, 0.0);
+	location location3 = Location(struct4, 0.0);
+	vector struct6 = Vector(131.88, 97.98, 0.0);
+	location location5 = Location(struct6, 0.0);
+	object oBos_proto1 = GetObjectByTag("bos_proto1", 0);
+	object oBos_proto2 = GetObjectByTag("bos_proto2", 0);
+	object oBos_proto3 = GetObjectByTag("bos_proto3", 0);
+	object oBos_proto4 = GetObjectByTag("bos_proto4", 0);
+	object oBos_proto5 = GetObjectByTag("bos_proto5", 0);
+	object oBos_proto6 = GetObjectByTag("bos_proto6", 0);
+	object oBos_astro1 = GetObjectByTag("bos_astro1", 0);
+	object oBos_astro2 = GetObjectByTag("bos_astro2", 0);
+	object oBos_astro3 = GetObjectByTag("bos_astro3", 0);
+	object oBos_astro4 = GetObjectByTag("bos_astro4", 0);
+	object oBos_astro5 = GetObjectByTag("bos_astro5", 0);
+	object oBos_astro6 = GetObjectByTag("bos_astro6", 0);
+	object oBos_other1 = GetObjectByTag("bos_other1", 0);
+	object oBos_other2 = GetObjectByTag("bos_other2", 0);
+	object oBos_other3 = GetObjectByTag("bos_other3", 0);
+	object oBos_other4 = GetObjectByTag("bos_other4", 0);
+	object oBos_other5 = GetObjectByTag("bos_other5", 0);
+	object oBos_other6 = GetObjectByTag("bos_other6", 0);
+	AssignCommand(oBos_other1, ActionForceMoveToLocation(location1, 1, 30.0));
+	AssignCommand(oBos_other2, ActionForceMoveToLocation(location3, 1, 30.0));
+	AssignCommand(oBos_other3, ActionForceMoveToLocation(location5, 1, 30.0));
+	AssignCommand(oBos_other4, ActionForceMoveToLocation(location1, 1, 30.0));
+	AssignCommand(oBos_other5, ActionForceMoveToLocation(location3, 1, 30.0));
+	AssignCommand(oBos_other6, ActionForceMoveToLocation(location5, 1, 30.0));
+	DelayCommand(1.0, AssignCommand(oBos_proto1, ActionForceMoveToLocation(location1, 1, 30.0)));
+	DelayCommand(1.4, AssignCommand(oBos_proto2, ActionForceMoveToLocation(location3, 1, 30.0)));
+	DelayCommand(1.3, AssignCommand(oBos_proto3, ActionForceMoveToLocation(location5, 1, 30.0)));
+	DelayCommand(1.2, AssignCommand(oBos_proto4, ActionForceMoveToLocation(location3, 1, 30.0)));
+	DelayCommand(1.6, AssignCommand(oBos_proto5, ActionForceMoveToLocation(location5, 1, 30.0)));
+	DelayCommand(1.8, AssignCommand(oBos_proto6, ActionForceMoveToLocation(location1, 1, 30.0)));
+	DelayCommand(2.0, AssignCommand(oBos_astro1, ActionForceMoveToLocation(location1, 1, 30.0)));
+	DelayCommand(2.0, AssignCommand(oBos_astro2, ActionForceMoveToLocation(location1, 1, 30.0)));
+	DelayCommand(2.5, AssignCommand(oBos_astro3, ActionForceMoveToLocation(location3, 1, 30.0)));
+	DelayCommand(2.4, AssignCommand(oBos_astro4, ActionForceMoveToLocation(location5, 1, 30.0)));
+	DelayCommand(3.0, AssignCommand(oBos_astro5, ActionForceMoveToLocation(location3, 1, 30.0)));
+	DelayCommand(2.0, AssignCommand(oBos_astro6, ActionForceMoveToLocation(location5, 1, 30.0)));
+}
+

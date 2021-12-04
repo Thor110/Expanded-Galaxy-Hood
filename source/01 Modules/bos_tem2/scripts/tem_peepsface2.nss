@@ -1,0 +1,43 @@
+void main() {
+	ActionPauseConversation();
+	ActionWait(1.0);
+	object oTem_kobayashi = GetObjectByTag("tem_kobayashi", 0);
+	object oPC = GetFirstPC();
+	object oTem_mechanic = GetObjectByTag("tem_mechanic", 0);
+	object oTem_charlie = GetObjectByTag("tem_charlie", 0);
+	object oCand = GetObjectByTag("Cand", 0);
+	object oCarth = GetObjectByTag("Carth", 0);
+	object oHK47 = GetObjectByTag("HK47", 0);
+	object oJolee = GetObjectByTag("Jolee", 0);
+	object oJuhani = GetObjectByTag("Juhani", 0);
+	object oMission = GetObjectByTag("Mission", 0);
+	object oT3M4 = GetObjectByTag("T3-M4", 0);
+	object oZaalbar = GetObjectByTag("Zaalbar", 0);
+	AssignCommand(oCand, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oCarth, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oHK47, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oJolee, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oJuhani, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oMission, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oT3M4, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oZaalbar, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oTem_kobayashi, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oTem_kobayashi, SetLockOrientationInDialog(oTem_kobayashi, 0));
+	AssignCommand(oPC, SetLockOrientationInDialog(oPC, 0));
+	AssignCommand(oPC, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oTem_mechanic, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oTem_mechanic, SetLockOrientationInDialog(oTem_mechanic, 0));
+	AssignCommand(oTem_charlie, ActionDoCommand(SetFacing(90.0)));
+	AssignCommand(oTem_charlie, SetLockOrientationInDialog(oTem_charlie, 0));
+	AssignCommand(oPC, SetLightsaberPowered(oPC, 0, 0, 0));
+	AssignCommand(oJolee, SetLightsaberPowered(oJolee, 0, 0, 0));
+	AssignCommand(oJuhani, SetLightsaberPowered(oJuhani, 0, 0, 0));
+	object oKor35_door2 = GetObjectByTag("kor35_door2", 0);
+	AssignCommand(oKor35_door2, SetLocked(oKor35_door2, 0));
+	AssignCommand(oKor35_door2, ActionOpenDoor(oKor35_door2));
+	RemoveAvailableNPC(0);
+	RemoveAvailableNPC(2);
+	AddAvailableNPCByTemplate(2, "tem_mechanic");
+	ActionResumeConversation();
+}
+

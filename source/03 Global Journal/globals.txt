@@ -1,0 +1,30 @@
+------------------------------
+» GLOBALS
+------------------------------
+Brotherhood of Shadow: Solomon's Revenge uses a number of numerics at various points during the mod. To avoid conflictions which would create major bugs in both BoS:SR and your own mod, do not use the following numerics:
+
+	- Tar_ZelkaRm
+	- TAR_CALOBARFIGHT
+	- Tar_Gelrood
+	- Tar_PazNik
+	- Tar_Christya
+	- Tar_YunGend
+
+added to globalcat.2da
+
+------------------------------
+» GLOBAL.JRL TAGS
+------------------------------
+To avoid conflictions between BoS:SR's .jrl file and your mods .jrl file, do not use any of the words listed below as tags.
+
+	- admin
+	- berloc
+	- blackrobed
+	- dance
+	- drix_meeting
+	- ship
+	- solomon
+	- trando
+
+pull the above entries from the global.jrl for BoSSR and add to the Port's global.jrl then add to the templates
+

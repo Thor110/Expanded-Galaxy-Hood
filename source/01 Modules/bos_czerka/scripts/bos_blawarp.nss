@@ -1,0 +1,40 @@
+void main() {
+	SetSoloMode(1);
+	vector struct2 = Vector(48.11, 64.54, 0.0);
+	location location1 = Location(struct2, 0.0);
+	vector struct4 = Vector(46.9, 65.36, 0.27);
+	location location3 = Location(struct4, 0.0);
+	vector struct6 = Vector(49.32, 65.36, 0.27);
+	location location5 = Location(struct6, 0.0);
+	object oBastila = GetObjectByTag("Bastila", 0);
+	object oCand = GetObjectByTag("Cand", 0);
+	object oCarth = GetObjectByTag("Carth", 0);
+	object oHK47 = GetObjectByTag("HK47", 0);
+	object oJolee = GetObjectByTag("Jolee", 0);
+	object oJuhani = GetObjectByTag("Juhani", 0);
+	object oMission = GetObjectByTag("Mission", 0);
+	object oT3M4 = GetObjectByTag("T3-M4", 0);
+	object oZaalbar = GetObjectByTag("Zaalbar", 0);
+	object oPC = GetFirstPC();
+	ActionDoCommand(SetCommandable(1, oBastila));
+	ActionDoCommand(SetCommandable(1, oCand));
+	ActionDoCommand(SetCommandable(1, oCarth));
+	ActionDoCommand(SetCommandable(1, oHK47));
+	ActionDoCommand(SetCommandable(1, oJolee));
+	ActionDoCommand(SetCommandable(1, oJuhani));
+	ActionDoCommand(SetCommandable(1, oMission));
+	ActionDoCommand(SetCommandable(1, oT3M4));
+	ActionDoCommand(SetCommandable(1, oZaalbar));
+	ActionDoCommand(SetCommandable(1, oPC));
+	AssignCommand(oPC, JumpToLocation(location1));
+	AssignCommand(oBastila, JumpToLocation(location3));
+	AssignCommand(oCand, JumpToLocation(location5));
+	AssignCommand(oCarth, JumpToLocation(location5));
+	AssignCommand(oHK47, JumpToLocation(location5));
+	AssignCommand(oJolee, JumpToLocation(location5));
+	AssignCommand(oJuhani, JumpToLocation(location5));
+	AssignCommand(oMission, JumpToLocation(location5));
+	AssignCommand(oT3M4, JumpToLocation(location5));
+	AssignCommand(oZaalbar, JumpToLocation(location5));
+}
+

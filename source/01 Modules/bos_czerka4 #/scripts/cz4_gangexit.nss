@@ -1,0 +1,39 @@
+void main() {
+	ActionPauseConversation();
+	object oPC = GetFirstPC();
+	object oBos_guydoor = GetObjectByTag("bos_guydoor", 0);
+	object oCz4_gangtlkr1b = GetObjectByTag("cz4_gangtlkr1b", 0);
+	object oCz4_gangtlkr2b = GetObjectByTag("cz4_gangtlkr2b", 0);
+	object oCz4_gangtlkr3b = GetObjectByTag("cz4_gangtlkr3b", 0);
+	object oCz4_gangtlkr4b = GetObjectByTag("cz4_gangtlkr4b", 0);
+	object oCz4_gangwaiter1b = GetObjectByTag("cz4_gangwaiter1b", 0);
+	object oCz4_gangwaiter2b = GetObjectByTag("cz4_gangwaiter2b", 0);
+	object oCz4_doorguy1 = GetObjectByTag("cz4_doorguy1", 0);
+	object oCz4_doorguy2 = GetObjectByTag("cz4_doorguy2", 0);
+	vector struct2 = Vector(37.96, 105.48, 0.0);
+	location location1 = Location(struct2, 0.0);
+	vector struct4 = Vector(38.38, 71.94, 0.0);
+	location location3 = Location(struct4, 0.0);
+	vector struct6 = Vector(99.27, 71.89, (-0.0));
+	location location5 = Location(struct6, 0.0);
+	vector struct8 = Vector(97.72, 95.15, (-1.27));
+	location location7 = Location(struct8, 0.0);
+	vector struct10 = Vector(35.39, 108.02, 0.0);
+	location location9 = Location(struct10, 0.0);
+	vector struct12 = Vector(35.32, 68.18, (-1.27));
+	location location11 = Location(struct12, 0.0);
+	vector struct14 = Vector(99.49, 69.01, (-0.0));
+	location location13 = Location(struct14, 0.0);
+	vector struct16 = Vector(99.64, 95.54, (-1.27));
+	location location15 = Location(struct16, 0.0);
+	AssignCommand(oCz4_gangtlkr1b, JumpToLocation(location15));
+	AssignCommand(oCz4_gangtlkr2b, JumpToLocation(location15));
+	AssignCommand(oCz4_gangtlkr3b, JumpToLocation(location15));
+	AssignCommand(oCz4_gangtlkr4b, JumpToLocation(location15));
+	AssignCommand(oCz4_gangwaiter1b, JumpToLocation(location15));
+	AssignCommand(oCz4_gangwaiter2b, JumpToLocation(location15));
+	AssignCommand(oCz4_doorguy1, JumpToLocation(location15));
+	AssignCommand(oCz4_doorguy2, JumpToLocation(location15));
+	ActionResumeConversation();
+}
+

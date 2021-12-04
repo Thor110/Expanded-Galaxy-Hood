@@ -1,0 +1,48 @@
+void main() {
+	object oPC = GetFirstPC();
+	vector struct2 = Vector(81.61, 109.86, 0.0);
+	location location1 = Location(struct2, 0.0);
+	vector struct4 = Vector(80.0, 111.01, 0.0);
+	location location3 = Location(struct4, 0.0);
+	vector struct6 = Vector(80.0, 108.8, 0.0);
+	location location5 = Location(struct6, 0.0);
+	vector struct8 = Vector(114.0, 85.9, 0.0);
+	location location7 = Location(struct8, 0.0);
+	vector struct10 = Vector(114.0, 87.4, 0.0);
+	location location9 = Location(struct10, 0.0);
+	vector struct12 = Vector(114.0, 84.13, 0.0);
+	location location11 = Location(struct12, 0.0);
+	object oCz3_corrupt4 = GetObjectByTag("cz3_corrupt4", 0);
+	object oCz3_corrupt5 = GetObjectByTag("cz3_corrupt5", 0);
+	object oCz3_corrupt6 = GetObjectByTag("cz3_corrupt6", 0);
+	AssignCommand(oCz3_corrupt4, ActionForceMoveToLocation(location7, 1, 30.0));
+	AssignCommand(oCz3_corrupt4, ActionDoCommand(DestroyObject(oCz3_corrupt4, 0.0, 0, 0.0)));
+	AssignCommand(oCz3_corrupt5, ActionForceMoveToLocation(location9, 1, 30.0));
+	AssignCommand(oCz3_corrupt5, ActionDoCommand(DestroyObject(oCz3_corrupt5, 0.0, 0, 0.0)));
+	AssignCommand(oCz3_corrupt6, ActionForceMoveToLocation(location11, 1, 30.0));
+	AssignCommand(oCz3_corrupt6, ActionDoCommand(DestroyObject(oCz3_corrupt6, 0.0, 0, 0.0)));
+	CreateObject(1, "cz3_battle1", Location(Vector(76.75, 116.47, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle2", Location(Vector(78.0, 117.86, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle3", Location(Vector(75.16, 115.21, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle4", Location(Vector(111.37, 109.95, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle5", Location(Vector(112.04, 107.71, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle6", Location(Vector(112.88, 111.76, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle7", Location(Vector(113.31, 101.57, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle8", Location(Vector(115.2, 102.01, 0.0), 180.0), 0);
+	CreateObject(1, "cz3_battle9", Location(Vector(104.54, 120.4, 0.0), 270.0), 0);
+	CreateObject(1, "cz3_battle10", Location(Vector(133.62, 94.23, 0.0), 270.0), 0);
+	AssignCommand(oPC, JumpToLocation(location1));
+	AssignCommand(GetPartyMemberByIndex(1), JumpToLocation(location3));
+	AssignCommand(GetPartyMemberByIndex(2), JumpToLocation(location5));
+	object oExp_door2 = GetObjectByTag("exp_door2", 0);
+	AssignCommand(oExp_door2, SetLocked(oExp_door2, 0));
+	AssignCommand(oExp_door2, ActionOpenDoor(oExp_door2));
+	object oTrig_door = GetObjectByTag("trig_door", 0);
+	AssignCommand(oTrig_door, SetLocked(oTrig_door, 0));
+	AssignCommand(oTrig_door, ActionOpenDoor(oTrig_door));
+	object oAdmin_door = GetObjectByTag("admin_door", 0);
+	AssignCommand(oAdmin_door, SetLocked(oAdmin_door, 0));
+	AssignCommand(oAdmin_door, ActionOpenDoor(oAdmin_door));
+	CreateObject(64, "cz3_main6", Location(Vector(112.34, 87.5, 0.0), 270.0), 0);
+}
+
