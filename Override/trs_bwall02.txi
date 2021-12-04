@@ -1,0 +1,4 @@
+downsamplemax 0
+downsamplemin 0
+bumpyshinytexture CM_m02abB
+bumpmaptexture LTS_Bwall04B

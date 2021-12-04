@@ -1,0 +1,7 @@
+proceduretype cycle
+numx 2
+numy 2
+fps 16
+blending additive
+downsamplemax 0
+downsamplemin 0

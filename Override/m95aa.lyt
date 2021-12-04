@@ -1,0 +1,9 @@
+#MAXLAYOUT ASCII
+filedependancy m95aa.max
+beginlayout
+   roomcount 1
+      m95aa_01a 0.0 0.0 0.0
+   trackcount 0
+   obstaclecount 0
+   doorhookcount 0
+donelayout

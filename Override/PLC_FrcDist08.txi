@@ -1,0 +1,9 @@
+blending additive
+proceduretype water
+distort 1
+waterwidth 32
+waterheight 32
+distortionamplitude 0.2
+speed 4
+defaultheight 14
+defaultwidth 32

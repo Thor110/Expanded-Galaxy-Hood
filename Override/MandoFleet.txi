@@ -1,0 +1,4 @@
+minmap 0
+blending punchthrough
+downsamplemax 0
+downsamplemin 0

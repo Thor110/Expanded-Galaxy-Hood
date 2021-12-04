@@ -1,0 +1,3 @@
+envmaptexture CM_Bright
+blending additive
+decal 1
