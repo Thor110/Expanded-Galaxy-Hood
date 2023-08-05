@@ -95,8 +95,6 @@ echo Installing Expanded Galaxy Brotherhood Project
 
 tslpatchdata\pykotorcli.exe "%mykey%" "%cd%"
 
-cls
-
 echo Star Wars : Knights of the Old Republic II Expanded Galaxy Brotherhood Project Installation Completed!
 
 pause
