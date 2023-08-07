@@ -93,6 +93,8 @@ if exist "%mykey%\chitin.key" (
 
 echo Installing Expanded Galaxy Brotherhood Project
 
+ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt01.bik"
+
 tslpatchdata\pykotorcli.exe "%mykey%" "%cd%"
 
 echo Star Wars : Knights of the Old Republic II Expanded Galaxy Brotherhood Project Installation Completed!
