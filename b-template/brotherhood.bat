@@ -1,7 +1,5 @@
 @echo off
 
-if exist Movies\ObsidianEnt.bik.main echo KotOR1 is currently enabled.
-if exist Movies\ObsidianEnt.bik.port echo KotOR2 is currently enabled.
 if exist Movies\ObsidianEnt.bik.hood echo Brotherhood is currently disabled!
 
 goto :INPUT
@@ -11,7 +9,7 @@ echo Brotherhood is currently disabled!
 goto :INPUT
 
 :INPUT2
-echo Brotherhood is currently enabled!
+echo Brotherhood is currently enabled! Or the port is disabled!
 goto :INPUT
 
 :INPUT
@@ -51,7 +49,7 @@ Rem ren "Override\k_ptat17_enter2.ncs" "k_ptat17_enter2-port.ncs"
 ren "Movies\ObsidianEnt.bik.hood" "ObsidianEnt.bik"
 
 ren "Override\k_pkor_33arenter.ncs.hood" "k_pkor_33arenter.ncs"
-ren "Override\k_ptat17af_enterncs.hood." "k_ptat17af_enter.ncs"
+ren "Override\k_ptat17af_enter.ncs.hood." "k_ptat17af_enter.ncs"
 ren "Override\k_ptat17_enter.ncs.hood" "k_ptat17_enter.ncs"
 ren "Override\k_ptat18ac_enter.ncs.hood" "k_ptat18ac_enter.ncs"
 
