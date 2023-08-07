@@ -93,7 +93,7 @@ if exist "%mykey%\chitin.key" (
 
 echo Installing Expanded Galaxy Brotherhood Project
 
-ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt01.bik"
+ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
 tslpatchdata\pykotorcli.exe "%mykey%" "%cd%"
 
