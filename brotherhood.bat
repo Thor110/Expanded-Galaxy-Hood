@@ -1,5 +1,19 @@
 @echo off
 
+if exist Movies\ObsidianEnt.bik.main echo KotOR1 is currently enabled.
+if exist Movies\ObsidianEnt.bik.port echo KotOR2 is currently enabled.
+if exist Movies\ObsidianEnt.bik.hood echo Brotherhood is currently disabled!
+
+goto :INPUT
+
+:INPUT1
+echo Brotherhood is currently disabled!
+goto :INPUT
+
+:INPUT2
+echo Brotherhood is currently enabled!
+goto :INPUT
+
 :INPUT
 echo Please whether you want to enable or disable Brotherhood of Shadow : Solomon's Revenge.
 echo Enable Brotherhood = 1
@@ -21,6 +35,8 @@ if %Choice% == 1 goto :ENABLE
 if %Choice% == 2 goto :DISABLE
 
 :ENABLE
+
+if exist Movies\ObsidianEnt.bik.port goto :INPUT2
 
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
@@ -47,6 +63,8 @@ echo Brotherhood Enabled!
 goto :END
 
 :DISABLE
+
+if exist Movies\ObsidianEnt.bik.hood goto :INPUT1
 
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
 
