@@ -1,14 +1,27 @@
 @echo off
 
-if exist Movies\ObsidianEnt.bik.hood echo Brotherhood is currently disabled!
+if exist "Movies\ObsidianEnt.bik.main" (
+  goto :TEST
+) else (
+  echo KotOR2 is currently active!
+  pause
+  exit
+)
+
+:TEST
+
+if exist Movies\ObsidianEnt.bik.hood goto :INPUT1
+if exist Movies\ObsidianEnt.bik.port goto :INPUT2
 
 goto :INPUT
 
 :INPUT1
+cls
 echo Brotherhood is currently disabled!
 goto :INPUT
 
 :INPUT2
+cls
 echo Brotherhood is currently enabled! Or the port is disabled!
 goto :INPUT
 
