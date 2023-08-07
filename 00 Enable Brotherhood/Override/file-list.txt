@@ -1,0 +1,16 @@
+file-list.bat
+file-list.txt
+genericdoors.2da
+k_pkor_33arenter.ncs
+k_pkor_33arenter.nss
+k_ptat17af_enter.ncs
+k_ptat17af_enter.nss
+k_ptat17af_enter2.ncs
+k_ptat17af_enter2.nss
+k_ptat17_enter.ncs
+k_ptat17_enter.nss
+k_ptat17_enter2.ncs
+k_ptat17_enter2.nss
+k_ptat18ac_enter.ncs
+k_ptat18ac_enter.nss
+placeables.2da
