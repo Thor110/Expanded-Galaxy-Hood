@@ -100,8 +100,11 @@ ren "%mykey%\Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.port"
 ren "%mykey%\Override\k_ptat17_enter.ncs" "k_ptat17_enter.ncs.port"
 ren "%mykey%\Override\k_ptat18ac_enter.ncs" "k_ptat18ac_enter.ncs.port"
 
-copy /y "launcher.bat" "%mykeyB%\launcher.bat"
-copy /y "brotherhood.bat" "%mykeyB%\brotherhood.bat"
+copy /y "launcher.bat" "%mykey%\launcher.bat"
+copy /y "brotherhood.bat" "%mykey%\brotherhood.bat"
+
+copy /y "hood-patch-notes.rtf" "%mykey%\hood-patch-notes.rtf"
+copy /y "hood-readme.rtf" "%mykey%\hood-readme.rtf"
 
 tslpatchdata\pykotorcli.exe "%mykey%" "%cd%"
 
@@ -109,4 +112,4 @@ echo Star Wars : Knights of the Old Republic II Expanded Galaxy Brotherhood Proj
 
 pause
 
-%mykey%\launcher.bat
+call "%mykey%\launcher.bat"
