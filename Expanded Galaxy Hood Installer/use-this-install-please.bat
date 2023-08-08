@@ -95,8 +95,15 @@ echo Installing Expanded Galaxy Brotherhood Project
 
 ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
+ren "%mykey%\Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.port"
+ren "%mykey%\Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.port"
+ren "%mykey%\Override\k_ptat17_enter.ncs" "k_ptat17_enter.ncs.port"
+ren "%mykey%\Override\k_ptat18ac_enter.ncs" "k_ptat18ac_enter.ncs.port"
+
 tslpatchdata\pykotorcli.exe "%mykey%" "%cd%"
 
 echo Star Wars : Knights of the Old Republic II Expanded Galaxy Brotherhood Project Installation Completed!
 
 pause
+
+%mykey%\launcher.bat
