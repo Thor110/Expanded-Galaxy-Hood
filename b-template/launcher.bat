@@ -1,15 +1,18 @@
 @echo off
 
-:START
-
 cls
+
+:START
 
 if exist dialog.tlk.main goto :INPUTA
 if exist dialog.tlk.port goto :INPUTB
 
 :INPUTA
-if exist Movies\ObsidianEnt.bik.port echo Brotherhood of Shadow : Solomon's Revenge is Active!
+if exist Movies\ObsidianEnt.bik.hood goto :TEMP2
+:TEMP
+echo Brotherhood of Shadow : Solomon's Revenge is Active!
 goto :INPUT
+:TEMP2
 echo KotOR1 Active!
 goto :INPUT
 :INPUTB
@@ -68,18 +71,19 @@ goto :INPUT7
 :HOOD2
 cls
 echo Brotherhood of Shadow : Solomon's Revenge is disabled! Please enable it first.
-pause
 brotherhood.bat
 
 :INPUT1
 cls
 echo KotOR1 is currently enabled.
 
-if exist Movies\ObsidianEnt.bik.hood goto :HOOD3
+if exist Movies\ObsidianEnt.bik.hood goto :HOOD4
+
+goto :HOOD3
 
 :HOOD4
 cls
-echo do you wish to enable or disable Brotherhood?
+echo do you wish to enable Brotherhood?
 echo Please select what you want to do?
 echo YES = 1
 echo NO  = 2
@@ -101,16 +105,16 @@ if %Enable% == 2 goto :NO
 
 :YES
 brotherhood.bat
-pause
 exit
 :NO
-echo Play Game! Starting KotOR without Brotherhood of Shadow : Solomon's Revenge.
+echo Play Game!
 pause
+start "" "steam://rungameid/208580//"
 exit
 
 :HOOD3
 cls
-echo do you wish to enable Brotherhood?
+echo do you wish to disable Brotherhood?
 echo Please select what you want to do?
 echo YES = 1
 echo NO  = 2
@@ -135,35 +139,35 @@ brotherhood.bat
 :NO
 echo Play Game!
 pause
+start "" "steam://rungameid/208580//"
 exit
 
 :INPUT2
 cls
 echo KotOR2 is currently enabled. Play Game!
 pause
+start "" "steam://rungameid/208580//"
 exit
 
 :INPUT3
 cls
 echo KotOR1 is currently enabled! Please enable KotOR2!
-pause
 port.bat
 :INPUT4
 cls
 echo KotOR2 is currently enabled! Please enable KotOR1!
-pause
 port.bat
 
 :INPUT6
 cls
 echo KotOR2 is currently enabled! therefore Brotherhood is currently disabled! Please enable it.
-pause
 port.bat
 
 :INPUT7
 cls
 echo Brotherhood is currently enabled. Play Game!
 pause
+start "" "steam://rungameid/208580//"
 exit
 
 :END
