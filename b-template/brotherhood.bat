@@ -71,6 +71,10 @@ Rem ren "Override\k_ptat17_enter2-hood.ncs" "k_ptat17_enter2.ncs"
 
 echo Brotherhood Enabled!
 
+pause
+
+launcher.bat
+
 goto :END
 
 :DISABLE
@@ -98,6 +102,10 @@ Rem ren "Override\k_ptat17af_enter2-port.ncs" "k_ptat17af_enter2.ncs"
 Rem ren "Override\k_ptat17_enter2-port.ncs" "k_ptat17_enter2.ncs"
 
 echo Brotherhood Disabled!
+
+pause
+
+launcher.bat
 
 goto :END
 
