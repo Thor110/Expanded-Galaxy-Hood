@@ -109,7 +109,7 @@ exit
 :NO
 echo Play Game!
 pause
-start "" "steam://rungameid/208580//"
+goto :STEAMORDISC
 exit
 
 :HOOD3
@@ -139,14 +139,14 @@ brotherhood.bat
 :NO
 echo Play Game!
 pause
-start "" "steam://rungameid/208580//"
+goto :STEAMORDISC
 exit
 
 :INPUT2
 cls
 echo KotOR2 is currently enabled. Play Game!
 pause
-start "" "steam://rungameid/208580//"
+goto :STEAMORDISC
 exit
 
 :INPUT3
@@ -167,7 +167,16 @@ port.bat
 cls
 echo Brotherhood is currently enabled. Play Game!
 pause
+goto :STEAMORDISC
+
+:STEAMORDISC
+if exist steam_api.dll goto :STEAM
+goto :DISCORGOG
+:STEAM
 start "" "steam://rungameid/208580//"
+exit
+:DISCORGOG
+swkotor2.exe
 exit
 
 :END
