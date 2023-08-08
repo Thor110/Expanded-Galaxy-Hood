@@ -103,8 +103,8 @@ ren "%mykey%\Override\k_ptat18ac_enter.ncs" "k_ptat18ac_enter.ncs.port"
 copy /y "launcher.bat" "%mykey%\launcher.bat"
 copy /y "brotherhood.bat" "%mykey%\brotherhood.bat"
 
-copy /y "hood-patch-notes.rtf" "%mykey%\hood-patch-notes.rtf"
-copy /y "hood-readme.rtf" "%mykey%\hood-readme.rtf"
+copy /y "brotherhood-patch-notes.rtf" "%mykey%\brotherhood-patch-notes.rtf"
+copy /y "brotherhood-readme.rtf" "%mykey%\brotherhood-readme.rtf"
 
 tslpatchdata\pykotorcli.exe "%mykey%" "%cd%"
 
