@@ -100,6 +100,9 @@ ren "%mykey%\Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.port"
 ren "%mykey%\Override\k_ptat17_enter.ncs" "k_ptat17_enter.ncs.port"
 ren "%mykey%\Override\k_ptat18ac_enter.ncs" "k_ptat18ac_enter.ncs.port"
 
+copy /y "launcher.bat" "%mykeyB%\launcher.bat"
+copy /y "brotherhood.bat" "%mykeyB%\brotherhood.bat"
+
 tslpatchdata\pykotorcli.exe "%mykey%" "%cd%"
 
 echo Star Wars : Knights of the Old Republic II Expanded Galaxy Brotherhood Project Installation Completed!
