@@ -2,3 +2,5 @@
 Expanded Galaxy : Brotherhood of Shadow : Solomon's Revenge!
 
 Requires the Main & Port parts of the project!
+
+brotherhood.bat is for enabling or disabling the expansion.
