@@ -5,7 +5,7 @@ if exist "Movies\ObsidianEnt.bik.main" (
 ) else (
   echo KotOR2 is currently active!
   pause
-  exit
+  port.bat
 )
 
 :TEST
