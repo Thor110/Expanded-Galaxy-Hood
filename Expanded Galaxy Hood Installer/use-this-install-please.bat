@@ -100,8 +100,8 @@ ren "%mykey%\Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.port"
 ren "%mykey%\Override\k_ptat17_enter.ncs" "k_ptat17_enter.ncs.port"
 ren "%mykey%\Override\k_ptat18ac_enter.ncs" "k_ptat18ac_enter.ncs.port"
 
-copy /y "launcher.bat" "%mykey%\launcher.bat"
-copy /y "brotherhood.bat" "%mykey%\brotherhood.bat"
+copy /y "tslpatchdata\launcher.bat" "%mykey%\launcher.bat"
+copy /y "tslpatchdata\brotherhood.bat" "%mykey%\brotherhood.bat"
 
 copy /y "brotherhood-patch-notes.rtf" "%mykey%\brotherhood-patch-notes.rtf"
 copy /y "brotherhood-readme.rtf" "%mykey%\brotherhood-readme.rtf"
