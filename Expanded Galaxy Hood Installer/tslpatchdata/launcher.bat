@@ -176,7 +176,7 @@ goto :DISCORGOG
 start "" "steam://rungameid/208580//"
 exit
 :DISCORGOG
-swkotor2.exe
+start swkotor2.exe
 exit
 
 :END
