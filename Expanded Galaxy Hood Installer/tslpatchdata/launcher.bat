@@ -95,76 +95,26 @@ if exist Movies\ObsidianEnt.bik.hood goto :ENABLE
 
 goto :HOOD3
 
-
 :HOOD3
 if %ChoiceA% == 1 goto :DISABLE
 if %ChoiceA% == 2 goto :EXTRA
 if %ChoiceA% == 3 goto :STEAMORDISC
-
-cls
-echo do you wish to disable Brotherhood?
-echo Please select what you want to do?
-echo YES = 1
-echo NO  = 2
-set /p Enable="Enter your choice: "
-echo %Enable%|findstr /r "[^0-9]" && (
-  goto :HOOD3
-)
-if %Enable% gtr 2  (
-  echo enter a number between 1 and 2
-  goto :HOOD3
-)
-if %Enable% lss 1 (
-  echo enter a number between 1 and 2
-  goto :HOOD3
-)
-
-if %Enable% == 1 goto :YES
-if %Enable% == 2 goto :NO
-
-:YES
-goto :DISABLE
-:NO
-echo Play Game!
-goto :STEAMORDISC
-exit
 
 :INPUT2
 if exist Movies\ObsidianEnt.bik.port goto :EXTRA
 cls
 echo KotOR2 is currently enabled. Play Game!
 goto :STEAMORDISC
-exit
 
 :INPUT3
 cls
 echo KotOR1 is currently enabled! Please enable KotOR2!
 goto :STEAMORDISC
+
 :INPUT4
 cls
 echo KotOR2 is currently enabled! Please enable KotOR1!
 goto :KOTOR1-C
-
-:INPUT6
-cls
-echo KotOR2 is currently enabled! therefore Brotherhood is currently disabled! Please enable it.
-goto :PORT
-
-
-:STEAMORDISC
-if exist steam_api.dll goto :STEAM
-goto :DISCORGOG
-:STEAM
-start "" "steam://rungameid/208580//"
-exit
-:DISCORGOG
-start swkotor2.exe
-exit
-
-:END
-
-
-
 
 :FINAL
 if exist dialog.tlk.main goto :INPUT1
@@ -193,9 +143,7 @@ echo KotOR1 Enabled!
 
 goto :ENABLE
 
-
 :EXTRA
-
 
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
 
@@ -210,9 +158,6 @@ ren "Override\k_pkor_33arenter.ncs.port" "k_pkor_33arenter.ncs"
 ren "Override\k_ptat17af_enter.ncs.port" "k_ptat17af_enter.ncs"
 ren "Override\k_ptat17_enter.ncs.port" "k_ptat17_enter.ncs"
 ren "Override\k_ptat18ac_enter.ncs.port" "k_ptat18ac_enter.ncs"
-
-
-
 
 
 
@@ -240,31 +185,7 @@ echo KotOR2 Enabled!
 
 goto :STEAMORDISC
 
-
-
-
-
-
-
-
-
-
-
-
 :BROTHERHOOD
-
-@echo off
-
-if exist "dialog.tlk.main" (
-  goto :TEST-B
-) else (
-  echo KotOR2 is currently active!
-  goto :PORT
-)
-
-:TEST-B
-
-if exist Movies\ObsidianEnt.bik.hood goto :INPUT2-B
 
 :INPUT1-B
 cls
@@ -281,25 +202,6 @@ goto :INPUT-B
 if %ChoiceA% == 1 goto :KOTOR1
 if %ChoiceA% == 2 goto :FINAL
 if %ChoiceA% == 3 goto :BOSSR
-
-echo Please whether you want to enable or disable Brotherhood of Shadow : Solomon's Revenge.
-echo Enable Brotherhood = 1
-echo Disable Brotherhood = 2
-set /p ChoiceB="Enter your choice: "
-echo %ChoiceB%|findstr /r "[^0-9]" && (
-  goto :INPUT-B
-)
-if %ChoiceB% gtr 2  (
-  echo enter a number between 1 and 2
-  goto :INPUT-B
-)
-if %ChoiceB% lss 1 (
-  echo enter a number between 1 and 2
-  goto :INPUT-B
-)
-
-if %ChoiceB% == 1 goto :ENABLE
-if %ChoiceB% == 2 goto :DISABLE
 
 :ENABLE
 
@@ -345,17 +247,6 @@ echo Brotherhood Disabled!
 
 goto :STEAMORDISC
 
-
-
-
-
-
-
-
-
-
-
-
 :PORT
 
 @echo off
@@ -383,24 +274,6 @@ goto :INPUT-C
 :INPUT-C
 if %ChoiceA% == 1 goto :KOTOR1-C
 if %ChoiceA% == 2 goto :KOTOR2-C
-echo Please select whether you want to enable KotOR1 or KotOR2.
-echo Enable KotOR1 = 1
-echo Enable KotOR2 = 2
-set /p ChoiceC="Enter your choice: "
-echo %ChoiceC%|findstr /r "[^0-9]" && (
-  goto :INPUT-C
-)
-if %ChoiceC% gtr 2  (
-  echo enter a number between 1 and 2
-  goto :INPUT-C
-)
-if %ChoiceC% lss 1 (
-  echo enter a number between 1 and 2
-  goto :INPUT-C
-)
-
-if %ChoiceC% == 1 goto :KOTOR1-C
-if %ChoiceC% == 2 goto :KOTOR2-C
 
 :KOTOR1-C
 
@@ -457,3 +330,15 @@ for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.main" "%%i"
 echo KotOR2 Enabled!
 
 goto :STEAMORDISC
+
+:STEAMORDISC
+if exist steam_api.dll goto :STEAM
+goto :DISCORGOG
+:STEAM
+start "" "steam://rungameid/208580//"
+exit
+:DISCORGOG
+start swkotor2.exe
+exit
+
+:END
