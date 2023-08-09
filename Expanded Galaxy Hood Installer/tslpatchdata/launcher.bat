@@ -66,15 +66,9 @@ goto :INPUT2
 
 echo Launching BoSSR!
 
-pause
-
 if exist dialog.tlk.main goto :HOOD1
 
-pause
-
 if exist Movies\ObsidianEnt.bik.hood goto :FINAL
-
-pause
 
 goto :HOOD2
 
@@ -94,11 +88,12 @@ goto :ENABLE
 cls
 echo KotOR1 is currently enabled.
 
-if exist Movies\ObsidianEnt.bik.hood goto :HOOD4
+if exist Movies\ObsidianEnt.bik.hood goto :ENABLE
 
 goto :HOOD3
 
 :HOOD4
+
 cls
 echo do you wish to enable Brotherhood?
 echo Please select what you want to do?
