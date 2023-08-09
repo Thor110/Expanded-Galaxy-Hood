@@ -50,7 +50,7 @@ if defined mykey3 (
 
 if exist "%mykey%\dialog.tlk.port" (
   echo Port Disabled!
-  echo please enable the port before installing!
+  echo please launch the port before installing!
   pause
   exit
 ) else (
