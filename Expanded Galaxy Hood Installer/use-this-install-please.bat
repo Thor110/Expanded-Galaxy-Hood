@@ -110,6 +110,7 @@ copy /y "source\template\k_ptat18ac_enter.ncs" "%mykey%\Override\k_ptat18ac_ente
 ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
 copy /y "tslpatchdata\launcher.bat" "%mykey%\launcher.bat"
+copy /y "tslpatchdata\port.bat" "%mykey%\port.bat"
 copy /y "tslpatchdata\brotherhood.bat" "%mykey%\brotherhood.bat"
 
 copy /y "brotherhood-patch-notes.rtf" "%mykey%\brotherhood-patch-notes.rtf"
