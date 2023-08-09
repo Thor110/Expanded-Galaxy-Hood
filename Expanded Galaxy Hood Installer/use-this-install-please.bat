@@ -48,6 +48,15 @@ if defined mykey3 (
   set "mykey=!mykey3!"
 )
 
+if exist "%mykey%\dialog.tlk.port" (
+  echo Port Disabled!
+  echo please enable the port before installing!
+  pause
+  exit
+) else (
+  echo Port Enabled!
+)
+
 setlocal disabledelayedexpansion
 
 if %temp% equ 1 goto :INSTALL
@@ -92,7 +101,6 @@ if exist "%mykey%\chitin.key" (
 )
 
 echo Installing Expanded Galaxy Brotherhood Project
-
 
 copy /y "source\template\k_pkor_33arenter.ncs" "%mykey%\Override\k_pkor_33arenter.ncs.port"
 copy /y "source\template\k_ptat17af_enter.ncs" "%mykey%\Override\k_ptat17af_enter.ncs.port"
