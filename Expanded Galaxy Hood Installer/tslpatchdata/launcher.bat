@@ -1,5 +1,7 @@
 @echo off
 
+setlocal EnableDelayedExpansion
+
 :LAUNCHER
 
 cls
@@ -102,13 +104,17 @@ if %ChoiceA% == 3 goto :STEAMORDISC
 
 :INPUT2
 if exist Movies\ObsidianEnt.bik.port goto :EXTRA
+if exist Movies\ObsidianEnt.bik.hood goto :KOTOR2-C
 cls
 echo KotOR2 is currently enabled. Play Game!
 goto :STEAMORDISC
 
 :INPUT3
+echo testing
+pause
+
 cls
-echo KotOR1 is currently enabled! Please enable KotOR2!
+echo KotOR2 is currently enabled!
 goto :STEAMORDISC
 
 :INPUT4
