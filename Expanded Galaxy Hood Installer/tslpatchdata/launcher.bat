@@ -110,9 +110,6 @@ echo KotOR2 is currently enabled. Play Game!
 goto :STEAMORDISC
 
 :INPUT3
-echo testing
-pause
-
 cls
 echo KotOR2 is currently enabled!
 goto :STEAMORDISC
