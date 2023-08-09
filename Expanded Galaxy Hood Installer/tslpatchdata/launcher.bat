@@ -50,17 +50,17 @@ echo Launching KotOR1 in KotOR2!
 
 if exist dialog.tlk.port goto :INPUT4
 
-goto :INPUT1
+if exist Movies\ObsidianEnt.bik.hood goto :STEAMORDISC
+
+goto :DISABLE
 
 :KOTOR2-A
 
 echo Launching KotOR2!
 
-if exist dialog.tlk.main goto :INPUT3
+if exist dialog.tlk.main goto :INPUT2
 
-if exist Movies\ObsidianEnt.bik.port goto :EXTRA
-
-goto :INPUT2
+goto :INPUT3
 
 :BOSSR-A
 
@@ -75,10 +75,9 @@ goto :HOOD2
 :HOOD1
 if exist Movies\ObsidianEnt.bik.hood goto :FINAL
 
-goto :INPUT7
+goto :STEAMORDISC
 
 :HOOD2
-
 cls
 echo Brotherhood of Shadow : Solomon's Revenge is disabled! Please enable it first.
 
@@ -88,44 +87,19 @@ goto :ENABLE
 cls
 echo KotOR1 is currently enabled.
 
+if %ChoiceA% == 1 goto :STEAMORDISC
+if %ChoiceA% == 2 goto :EXTRA
+if %ChoiceA% == 3 goto :ENABLE
+
 if exist Movies\ObsidianEnt.bik.hood goto :ENABLE
 
 goto :HOOD3
 
-:HOOD4
-
-cls
-echo do you wish to enable Brotherhood?
-echo Please select what you want to do?
-echo YES = 1
-echo NO  = 2
-set /p Enable="Enter your choice: "
-echo %Enable%|findstr /r "[^0-9]" && (
-  goto :HOOD4
-)
-if %Enable% gtr 2  (
-  echo enter a number between 1 and 2
-  goto :HOOD4
-)
-if %Enable% lss 1 (
-  echo enter a number between 1 and 2
-  goto :HOOD4
-)
-
-if %Enable% == 1 goto :ENABLE
-if %Enable% == 2 goto :NO
-
-:YES
-goto :BROTHERHOOD
-exit
-:NO
-echo Play Game!
-goto :STEAMORDISC
-exit
 
 :HOOD3
 if %ChoiceA% == 1 goto :DISABLE
 if %ChoiceA% == 2 goto :EXTRA
+if %ChoiceA% == 3 goto :STEAMORDISC
 
 cls
 echo do you wish to disable Brotherhood?
@@ -156,7 +130,7 @@ goto :STEAMORDISC
 exit
 
 :INPUT2
-if exist Movies\ObsidianEnt.bik.hood goto :FINAL
+if exist Movies\ObsidianEnt.bik.port goto :EXTRA
 cls
 echo KotOR2 is currently enabled. Play Game!
 goto :STEAMORDISC
@@ -165,21 +139,17 @@ exit
 :INPUT3
 cls
 echo KotOR1 is currently enabled! Please enable KotOR2!
-goto :PORT
+goto :STEAMORDISC
 :INPUT4
 cls
 echo KotOR2 is currently enabled! Please enable KotOR1!
-goto :PORT
+goto :KOTOR1-C
 
 :INPUT6
 cls
 echo KotOR2 is currently enabled! therefore Brotherhood is currently disabled! Please enable it.
 goto :PORT
 
-:INPUT7
-cls
-echo Brotherhood is currently enabled. Play Game!
-goto :STEAMORDISC
 
 :STEAMORDISC
 if exist steam_api.dll goto :STEAM
