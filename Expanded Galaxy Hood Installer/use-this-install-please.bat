@@ -93,12 +93,13 @@ if exist "%mykey%\chitin.key" (
 
 echo Installing Expanded Galaxy Brotherhood Project
 
-ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
-ren "%mykey%\Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.port"
-ren "%mykey%\Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.port"
-ren "%mykey%\Override\k_ptat17_enter.ncs" "k_ptat17_enter.ncs.port"
-ren "%mykey%\Override\k_ptat18ac_enter.ncs" "k_ptat18ac_enter.ncs.port"
+copy /y "source\template\k_pkor_33arenter.ncs" "%mykey%\Override\k_pkor_33arenter.ncs.port"
+copy /y "source\template\k_ptat17af_enter.ncs" "%mykey%\Override\k_ptat17af_enter.ncs.port"
+copy /y "source\template\k_ptat17_enter.ncs" "%mykey%\Override\k_ptat17_enter.ncs.port"
+copy /y "source\template\k_ptat18ac_enter.ncs" "%mykey%\Override\k_ptat18ac_enter.ncs.port"
+
+ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
 copy /y "tslpatchdata\launcher.bat" "%mykey%\launcher.bat"
 copy /y "tslpatchdata\brotherhood.bat" "%mykey%\brotherhood.bat"
