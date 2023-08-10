@@ -62,17 +62,17 @@ echo Launching KotOR2!
 
 if exist dialog.tlk.main goto :INPUT2
 
-goto :INPUT3
+goto :STEAMORDISC
 
 :BOSSR-A
 
 echo Launching BoSSR!
 
-if exist dialog.tlk.main goto :HOOD1
+if exist dialog.tlk.port goto :FINAL
 
-if exist Movies\ObsidianEnt.bik.hood goto :FINAL
+if exist Movies\ObsidianEnt.bik.hood goto :ENABLE
 
-goto :HOOD2
+goto :STEAMORDISC
 
 :HOOD1
 if exist Movies\ObsidianEnt.bik.hood goto :FINAL
