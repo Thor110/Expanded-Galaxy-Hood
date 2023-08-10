@@ -3,9 +3,7 @@
 setlocal EnableDelayedExpansion
 
 :LAUNCHER
-
 cls
-
 :START
 
 if exist dialog.tlk.main goto :INPUTA
@@ -122,8 +120,6 @@ ren "Override\k_pkor_33arenter.ncs.port" "k_pkor_33arenter.ncs"
 ren "Override\k_ptat17af_enter.ncs.port" "k_ptat17af_enter.ncs"
 ren "Override\k_ptat17_enter.ncs.port" "k_ptat17_enter.ncs"
 ren "Override\k_ptat18ac_enter.ncs.port" "k_ptat18ac_enter.ncs"
-
-
 
 ren Movies\ObsidianEnt.bik ObsidianEnt.bik.port
 
