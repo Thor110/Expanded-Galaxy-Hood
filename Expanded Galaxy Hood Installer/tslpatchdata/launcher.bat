@@ -71,6 +71,12 @@ for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.port" "%%i"
 echo KotOR1 Enabled!
 goto :ENABLE
 :EXTRA
+ren "Movies\appearance.2da" "appearance.2da.hood"
+ren "Movies\heads.2da" "heads.2da.hood"
+ren "Movies\portraits.2da" "portraits.2da.hood"
+ren "Movies\appearance.2da.port" "appearance.2da"
+ren "Movies\heads.2da.port" "heads.2da"
+ren "Movies\portraits.2da.port" "portraits.2da"
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
 ren "Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.hood"
 ren "Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.hood"
@@ -98,6 +104,12 @@ for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.main" "%%i"
 echo KotOR2 Enabled!
 goto :STEAMORDISC
 :ENABLE
+ren "Movies\appearance.2da" "appearance.2da.port"
+ren "Movies\heads.2da" "heads.2da.port"
+ren "Movies\portraits.2da" "portraits.2da.port"
+ren "Movies\appearance.2da.hood" "appearance.2da"
+ren "Movies\heads.2da.hood" "heads.2da"
+ren "Movies\portraits.2da.hood" "portraits.2da"
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 ren "Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.port"
 ren "Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.port"
@@ -111,6 +123,12 @@ ren "Override\k_ptat18ac_enter.ncs.hood" "k_ptat18ac_enter.ncs"
 echo Brotherhood Enabled!
 goto :STEAMORDISC
 :DISABLE
+ren "Movies\appearance.2da" "appearance.2da.hood"
+ren "Movies\heads.2da" "heads.2da.hood"
+ren "Movies\portraits.2da" "portraits.2da.hood"
+ren "Movies\appearance.2da.port" "appearance.2da"
+ren "Movies\heads.2da.port" "heads.2da"
+ren "Movies\portraits.2da.port" "portraits.2da"
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
 ren "Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.hood"
 ren "Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.hood"
