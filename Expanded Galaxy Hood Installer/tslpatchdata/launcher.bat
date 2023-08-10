@@ -50,7 +50,7 @@ if %ChoiceA% == 3 goto :BOSSR-A
 
 echo Launching KotOR1 in KotOR2!
 
-if exist dialog.tlk.port goto :INPUT4
+if exist dialog.tlk.port goto :KOTOR1-C
 
 if exist Movies\ObsidianEnt.bik.hood goto :STEAMORDISC
 
@@ -74,34 +74,6 @@ if exist Movies\ObsidianEnt.bik.hood goto :ENABLE
 
 goto :STEAMORDISC
 
-:HOOD1
-if exist Movies\ObsidianEnt.bik.hood goto :FINAL
-
-goto :STEAMORDISC
-
-:HOOD2
-cls
-echo Brotherhood of Shadow : Solomon's Revenge is disabled! Please enable it first.
-
-goto :ENABLE
-
-:INPUT1
-cls
-echo KotOR1 is currently enabled.
-
-if %ChoiceA% == 1 goto :STEAMORDISC
-if %ChoiceA% == 2 goto :EXTRA
-if %ChoiceA% == 3 goto :ENABLE
-
-if exist Movies\ObsidianEnt.bik.hood goto :ENABLE
-
-goto :HOOD3
-
-:HOOD3
-if %ChoiceA% == 1 goto :DISABLE
-if %ChoiceA% == 2 goto :EXTRA
-if %ChoiceA% == 3 goto :STEAMORDISC
-
 :INPUT2
 if exist Movies\ObsidianEnt.bik.port goto :EXTRA
 if exist Movies\ObsidianEnt.bik.hood goto :KOTOR2-C
@@ -109,18 +81,7 @@ cls
 echo KotOR2 is currently enabled. Play Game!
 goto :STEAMORDISC
 
-:INPUT3
-cls
-echo KotOR2 is currently enabled!
-goto :STEAMORDISC
-
-:INPUT4
-cls
-echo KotOR2 is currently enabled! Please enable KotOR1!
-goto :KOTOR1-C
-
 :FINAL
-if exist dialog.tlk.main goto :INPUT1
 
 ren Movies\ObsidianEnt.bik ObsidianEnt.bik.main
 
@@ -188,27 +149,7 @@ echo KotOR2 Enabled!
 
 goto :STEAMORDISC
 
-:BROTHERHOOD
-
-:INPUT1-B
-cls
-echo Brotherhood is currently enabled!
-goto :INPUT-B
-
-:INPUT2-B
-cls
-echo Brotherhood is currently disabled!
-goto :INPUT-B
-
-:INPUT-B
-
-if %ChoiceA% == 1 goto :KOTOR1
-if %ChoiceA% == 2 goto :FINAL
-if %ChoiceA% == 3 goto :BOSSR
-
 :ENABLE
-
-if exist Movies\ObsidianEnt.bik.port goto :INPUT1-B
 
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
@@ -230,8 +171,6 @@ goto :STEAMORDISC
 
 :DISABLE
 
-if exist Movies\ObsidianEnt.bik.hood goto :INPUT2-B
-
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
 
 ren "Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.hood"
@@ -250,37 +189,7 @@ echo Brotherhood Disabled!
 
 goto :STEAMORDISC
 
-:PORT
-
-@echo off
-
-setlocal EnableDelayedExpansion
-
-if exist dialog.tlk.main goto :INPUT1-C
-if exist dialog.tlk.port goto :INPUT2-C
-
-:HOOD-C
-echo Brotherhood of Shadow : Solomon's Revenge is enabled, you must disable it first!
-
-goto :FINAL
-
-:INPUT1-C
-if exist Movies\ObsidianEnt.bik.port goto :HOOD-C
-cls
-echo KotOR1 is currently enabled.
-goto :INPUT-C
-:INPUT2-C
-cls
-echo KotOR2 is currently enabled.
-goto :INPUT-C
-
-:INPUT-C
-if %ChoiceA% == 1 goto :KOTOR1-C
-if %ChoiceA% == 2 goto :KOTOR2-C
-
 :KOTOR1-C
-
-if exist dialog.tlk.main goto :INPUT1-C
 
 ren Movies\ObsidianEnt.bik ObsidianEnt.bik.main
 
@@ -307,8 +216,6 @@ echo KotOR1 Enabled!
 goto :STEAMORDISC
 
 :KOTOR2-C
-
-if exist dialog.tlk.port goto :INPUT2-C
 
 ren Movies\ObsidianEnt.bik ObsidianEnt.bik.port
 
