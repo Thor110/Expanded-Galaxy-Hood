@@ -175,6 +175,11 @@ ren StreamMusic\mus_sion.wav.main mus_sion.wav
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.main" "%%i"
 echo KotOR2 Enabled!
 :STEAMORDISC
-pause
-if exist steam_api.dll start swkotor2.exe
+if exist steam_api.dll goto :STEAM
+goto :DISCORGOG
+:STEAM
 start "" "steam://rungameid/208580//"
+exit
+:DISCORGOG
+start swkotor2.exe
+exit
