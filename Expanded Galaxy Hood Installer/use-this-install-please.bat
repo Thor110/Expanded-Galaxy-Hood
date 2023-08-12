@@ -109,7 +109,6 @@ copy /y "source\template\k_ptat18ac_enter.ncs" "%mykey%\Override\k_ptat18ac_ente
 
 ren "%mykey%\movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 
-copy /y "%mykeyB%\Override\appearance.2da" "%mykeyB%\Override\appearance.2da.port"
 copy /y "%mykeyB%\Override\portraits.2da" "%mykeyB%\Override\heads.2da.port"
 copy /y "%mykeyB%\Override\heads.2da" "%mykeyB%\Override\portraits.2da.port"
 
