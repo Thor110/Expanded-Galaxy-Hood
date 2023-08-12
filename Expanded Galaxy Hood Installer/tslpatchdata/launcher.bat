@@ -40,20 +40,20 @@ if exist Movies\ObsidianEnt.bik.hood goto :STEAMORDISC
 goto :DISABLE
 :KOTOR2-A
 echo Launching KotOR2!
-if exist dialog.tlk.main goto :INPUT2
+if exist dialog.tlk.main goto :CHECK
 goto :STEAMORDISC
 :BOSSR-A
 echo Launching BoSSR!
-if exist dialog.tlk.port goto :FINAL
+if exist dialog.tlk.port goto :KOTOR1-B
 if exist Movies\ObsidianEnt.bik.hood goto :ENABLE
 goto :STEAMORDISC
-:INPUT2
-if exist Movies\ObsidianEnt.bik.port goto :EXTRA
+:CHECK
+if exist Movies\ObsidianEnt.bik.port goto :KOTOR2-B
 if exist Movies\ObsidianEnt.bik.hood goto :KOTOR2-C
 cls
 echo KotOR2 is currently enabled. Play Game!
 goto :STEAMORDISC
-:FINAL
+:KOTOR1-B
 ren Movies\ObsidianEnt.bik ObsidianEnt.bik.main
 ren dialog.tlk dialog.tlk.main
 ren lips\001EBO_loc.mod 001EBO_loc.mod.main
@@ -70,7 +70,7 @@ ren StreamMusic\mus_sion.wav.port mus_sion.wav
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.port" "%%i"
 echo KotOR1 Enabled!
 goto :ENABLE
-:EXTRA
+:KOTOR2-B
 ren "Override\heads.2da" "heads.2da.hood"
 ren "Override\portraits.2da" "portraits.2da.hood"
 ren "Override\heads.2da.port" "heads.2da"
@@ -169,6 +169,8 @@ ren StreamMusic\mus_sion.wav.main mus_sion.wav
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.main" "%%i"
 echo KotOR2 Enabled!
 :STEAMORDISC
+echo press any key to play the game. . .
+pause
 if exist steam_api.dll goto :STEAM
 goto :DISCORGOG
 :STEAM
@@ -176,4 +178,3 @@ start "" "steam://rungameid/208580//"
 exit
 :DISCORGOG
 start swkotor2.exe
-exit
