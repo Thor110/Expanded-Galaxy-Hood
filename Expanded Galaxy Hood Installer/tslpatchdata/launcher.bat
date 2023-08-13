@@ -69,10 +69,6 @@ for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.port" "%%i"
 echo KotOR1 Enabled!
 goto :ENABLE
 :KOTOR2-B
-ren "Override\heads.2da" "heads.2da.hood"
-ren "Override\portraits.2da" "portraits.2da.hood"
-ren "Override\heads.2da.port" "heads.2da"
-ren "Override\portraits.2da.port" "portraits.2da"
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
 ren "Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.hood"
 ren "Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.hood"
@@ -84,24 +80,8 @@ ren "Override\k_ptat17af_enter.ncs.port" "k_ptat17af_enter.ncs"
 ren "Override\k_ptat17_enter.ncs.port" "k_ptat17_enter.ncs"
 ren "Override\k_ptat18ac_enter.ncs.port" "k_ptat18ac_enter.ncs"
 ren Movies\ObsidianEnt.bik ObsidianEnt.bik.port
-ren dialog.tlk dialog.tlk.port
-ren lips\001EBO_loc.mod 001EBO_loc.mod.port
-ren Modules\001ebo.mod 001ebo.mod.port
-ren StreamMusic\mus_sion.wav mus_sion.wav.port
-for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i" "%%i.port"
-ren Movies\ObsidianEnt.bik.main ObsidianEnt.bik
-ren dialog.tlk.main dialog.tlk
-ren lips\001EBO_loc.mod.main 001EBO_loc.mod
-ren Modules\001ebo.mod.main 001ebo.mod
-ren StreamMusic\mus_sion.wav.main mus_sion.wav
-for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.main" "%%i"
-echo KotOR2 Enabled!
-goto :STEAMORDISC
+goto :KOTOR2-C
 :ENABLE
-ren "Override\heads.2da" "heads.2da.port"
-ren "Override\portraits.2da" "portraits.2da.port"
-ren "Override\heads.2da.hood" "heads.2da"
-ren "Override\portraits.2da.hood" "portraits.2da"
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.port"
 ren "Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.port"
 ren "Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.port"
@@ -115,10 +95,6 @@ ren "Override\k_ptat18ac_enter.ncs.hood" "k_ptat18ac_enter.ncs"
 echo Brotherhood Enabled!
 goto :STEAMORDISC
 :DISABLE
-ren "Override\heads.2da" "heads.2da.hood"
-ren "Override\portraits.2da" "portraits.2da.hood"
-ren "Override\heads.2da.port" "heads.2da"
-ren "Override\portraits.2da.port" "portraits.2da"
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
 ren "Override\k_pkor_33arenter.ncs" "k_pkor_33arenter.ncs.hood"
 ren "Override\k_ptat17af_enter.ncs" "k_ptat17af_enter.ncs.hood"
