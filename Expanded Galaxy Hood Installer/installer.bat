@@ -67,7 +67,20 @@ Rem set /a "index+=1"
 
 :CaptureInput
 set /p choice=Please choose an option [1-%index%]
-
+echo %choice%|findstr /r "[^1-!index!]" && (
+  goto :FinalInput
+)
+if %choice% gtr !index! (
+  cls
+  echo Enter a number between 1 and !index!
+  goto :Process-Choice
+)
+if %choice% lss 1 (
+  cls
+  echo Enter a number between 1 and !index!
+  goto :Process-Choice
+)
+:FinalInput
 :: Check if user chose manual input
 if "%choice%"=="%manualIndex%" (
     set /p chosenPath=Enter your manual path: 
@@ -105,7 +118,6 @@ set "KOTOR2RegOptions=HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\
 set "KOTOR2PathOptions=C:\Program Files\Steam\steamapps\common\Knights of the Old Republic II;C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II;C:\Program Files\LucasArts\SWKotOR2;C:\Program Files (x86)\LucasArts\SWKotOR2;C:\GOG Games\Star Wars - KotOR2"
 
 call :Process-Choice "TSL" "%KOTOR2RegOptions%" "%KOTOR2PathOptions%" "%TSLPath%"
-
 
 echo.
 echo TSL Path chosen: !KOTORPaths!
