@@ -25,6 +25,14 @@ set "regKey=%~1"
 for /f "tokens=2*" %%a in ('reg query "%regKey%" /v InstallLocation 2^>nul') do (
     set "resolvedPath=%%b"
 )
+
+:: If InstallLocation not found, check Path
+if not defined resolvedPath (
+    for /f "tokens=2*" %%a in ('reg query "%regKey%" /v Path 2^>nul') do (
+        set "resolvedPath=%%b"
+    )
+)
+
 if defined resolvedPath (
     echo %resolvedPath%
     exit /b 0
@@ -40,7 +48,7 @@ set "title=%~1"
 set "regOptions=%~2"
 set "pathOptions=%~3"
 set "cmdlinePath=%~4"
-
+echo Please select the directory that you wish to install the mod to:
 :: Display choices to the user
 set "index=1"
 for %%A in (%regOptions%) do (
