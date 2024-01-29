@@ -1,5 +1,7 @@
 # Expanded-Galaxy-Hood
-Expanded Galaxy : Brotherhood of Shadow : Solomon's Revenge!
+KotOR : Expanded Galaxy : Brotherhood of Shadow : Solomon's Revenge!
+
+KotOR : Expanded Galaxy : Brotherhood of Shadow : Solomon's Revenge! is a port of the first game's biggest mod to KotOR : Expanded Galaxy.
 
 ## Repository folder and file structure
 # Folders
