@@ -2,6 +2,6 @@
 
 for /r "Modules Source" %%x in (*.mod) do copy "%%x" "%cd%\Expanded Galaxy Hood Installer\tslpatchdata\Modules"
 
-echo release zipped
+echo Modules Updated
 pause
 exit
