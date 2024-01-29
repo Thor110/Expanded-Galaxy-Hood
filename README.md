@@ -25,4 +25,6 @@ version.txt - the current version number.
 
 Requires the Main & Port parts of the project!
 
-launcher.bat is for choosing which version of the game you wish to play.
+# Playing the game
+
+launcher.bat - is for choosing between KotOR1, KotOR2 & BoSSR and is installed to the main game directory.
