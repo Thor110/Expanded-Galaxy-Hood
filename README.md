@@ -23,7 +23,7 @@ version.txt - the current version number.
 
 ## Installation
 
-Requires the Main & Port parts of the project!
+Requires the Main & Port parts of the project! [https://github.com/Thor110/Expanded-Galaxy-Main] + [https://github.com/Thor110/Expanded-Galaxy-Port]
 
 # Playing the game
 
