@@ -3,7 +3,7 @@ KotOR : Expanded Galaxy : Brotherhood of Shadow : Solomon's Revenge! is a port o
 
 ## Repository folder and file structure
 # Folders
-Expanded Galaxy Hood Installer - the brotherhood installer folder containing the source folder and tslpatchdata folder as well as HoloPAtcher.
+Expanded Galaxy Hood Installer - the brotherhood installer folder containing the source folder and tslpatchdata folder as well as HoloPatcher.
 
 Modules Source - contains the level files organised into folders denoting the planet and module names as well as the .mod files themselves, I use this to quickly and easily repack levels.
 
