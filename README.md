@@ -1,3 +1,9 @@
+## WORK IN PROGRESS
+
+As I am actively working on the project, things may be broken from time to time, I apologise in advance for any bugs or faults you may encounter when downloading directly from the repository.
+
+Hoping to put out a proper release of all three parts of the project again some time soon.
+
 # Expanded Galaxy Hood
 KotOR : Expanded Galaxy : Brotherhood of Shadow : Solomon's Revenge! is a port of the first game's biggest mod to KotOR : Expanded Galaxy.
 
