@@ -1,0 +1,16 @@
+#MAXLAYOUT ASCII
+filedependancy m60aa.max
+beginlayout
+   roomcount 8
+      m65aa_01a 0.0 0.0 0.0
+      m65aa_01b 0.0 0.0 0.0
+      m65aa_01c 0.0 0.0 0.0
+      m65aa_01d 0.0 0.0 0.0
+      m65aa_01e 0.0 0.0 0.0
+      m65aa_01f 0.0 0.0 0.0
+      m65aa_01h 0.0 0.0 0.0
+      m65aa_01k 0.0 0.0 0.0
+   trackcount 0
+   obstaclecount 0
+   doorhookcount 0
+donelayout
