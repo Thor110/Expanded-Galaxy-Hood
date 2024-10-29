@@ -40,7 +40,10 @@
 *.wav binary
 *.wok binary
 # Flag any text files to have Windows-style EOL to prevent crashes (apparently Odyssey does not like Unix-style).
-*.lyt text eol=crlf
-*.nss text eol=crlf
-*.txi text eol=crlf
-*.vis text eol=crlf
+*.lyt text
+*.vis text
+*.ascii.mdl text
+*.txi text
+*.nss text
+# all text should be CRLF for windows endings.
+* text=auto eol=crlf
