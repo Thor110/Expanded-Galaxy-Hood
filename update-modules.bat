@@ -1,7 +1,12 @@
 @echo off
+rem Thor110
+rem update all modules
 
-for /r "Modules Source" %%x in (*.mod) do copy "%%x" "%cd%\Expanded Galaxy Hood Installer\tslpatchdata\Modules"
+echo compiling all modules in all relevant directories
+echo run this second
+
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& '%cd%\modules\create-all-modules.ps1'" 
+
+for /r "modules" %%x in (*.mod) do copy "%%x" "%cd%\Expanded Galaxy Hood Installer\tslpatchdata\Modules"
 
 echo Modules Updated
-pause
-exit
