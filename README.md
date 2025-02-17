@@ -3,6 +3,8 @@ KotOR : Expanded Galaxy : Brotherhood of Shadow : Solomon's Revenge! is a port o
 
 ## WORK IN PROGRESS
 
+Brotherhood of Shadow : Solomon's Revenge : Expanded Galaxy is considered experimental and probably shouldn't be used for the time being! The launcher hasn't been updated so if and when playing this part of the project, please use the batch launcher. ( "launcher.bat" ) which is included and installed to the games folder and not the .exe file from the port until further notice.
+
 As I am actively working on the project, things may be broken from time to time, I apologise in advance for any bugs or faults you may encounter when downloading directly from the repository.
 
 Hoping to put out a proper release of all three parts of the project again some time soon.
