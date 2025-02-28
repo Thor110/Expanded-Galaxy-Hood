@@ -1,12 +1,12 @@
 @echo off
 rem Thor110
-rem compile all nss scripts in all sub directories
+rem compile all nss scripts in all sub directories run this fir
 
 echo rewrite this specifically for brotherhood first!
 echo IE : rewrite these and make the changes source folder!
 echo update-scripts.bat
-echo update-changes.ini.bat
 echo update-everything.bat
+echo update-modules.bat
 pause
 exit
 
