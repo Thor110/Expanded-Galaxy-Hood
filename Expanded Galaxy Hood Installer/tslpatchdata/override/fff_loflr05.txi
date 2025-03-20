@@ -1,0 +1,2 @@
+bumpyshinytexture CM_LZA03a
+bumpmaptexture LZA_flr06BMP

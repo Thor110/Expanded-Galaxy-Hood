@@ -1,0 +1,15 @@
+#MAXLAYOUT ASCII
+filedependancy m80aa.max
+beginlayout
+   roomcount 5
+      m80aa_01a 0.0 465.0 75.0
+      m80aa_03a 225.0 465.0 75.0
+      m80aa_02a 112.5 465.0 75.0
+      m80aa_04a 325.0 465.0 75.0
+      m80aa_05a 516.371 465.0 75.0
+   trackcount 0
+   obstaclecount 0
+   doorhookcount 2
+      m80aa_01a door_02 0 48.9259 253.234 83.8165 0.83867 0.0 0.0 0.544639
+      m80aa_02a door_1 0 89.1445 108.387 84.2111 0.117537 0.0 0.0 0.993068
+donelayout
