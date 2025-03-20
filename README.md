@@ -17,6 +17,8 @@ Requires the Main & Port parts of the project! [https://github.com/Thor110/Expan
 
 launcher.bat - is for choosing between KotOR1, KotOR2 & BoSSR and is installed to the main game directory.
 
+launcher.exe - this is not supported for Brotherhood at the moment, please use the batch file for the time being.
+
 ## Repository folder and file structure
 # Folders
 Expanded Galaxy Hood Installer - the brotherhood installer folder containing the source folder and tslpatchdata folder as well as HoloPatcher.
