@@ -36,16 +36,16 @@ echo Override Install List Generated!
 echo Creating changes.ini files...
 
 type changes\changes-amazon-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-amazon.ini"
-type changes\changes-android-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-android.ini"
+type changes\changes-mobile-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-android.ini"
 type changes\changes-disc-intro.ini			changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-disc.ini"
 type changes\changes-gog-intro.ini			changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-gog.ini"
 type changes\changes-legacypc-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-legacypc.ini"
 type changes\changes-steam-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-steam.ini"
-type changes\changes-switch-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-switch.ini"
+type changes\changes-mobile-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-switch.ini"
 type changes\changes-xbox-intro.ini			changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-xbox.ini"
 type changes\changes-macappstore-intro.ini	changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-macappstore.ini"
 type changes\changes-macsteam-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-macsteam.ini"
-type changes\changes-ios-intro.ini			changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-ios.ini"
+type changes\changes-mobile-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-ios.ini"
 
 del override.txt
 
