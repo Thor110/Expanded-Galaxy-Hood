@@ -1,2 +1,0 @@
-bumpyshinytexture CM_m02abB
-bumpmaptexture LTS_Bwall04B
