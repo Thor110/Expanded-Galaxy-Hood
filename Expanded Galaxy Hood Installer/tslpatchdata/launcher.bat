@@ -1,7 +1,16 @@
 @echo off
 setlocal EnableDelayedExpansion
-cls
+:REGISTRY
+reg query "HKCU\Expanded Galaxy" /v Game >nul
+if %errorlevel% neq 0 (
+  reg add "HKCU\Expanded Galaxy" /v Game /t REG_DWORD /d 1
+)
+if exist fresh.install (
+  reg add "HKCU\Expanded Galaxy" /v Game /t REG_DWORD /d 1 /f
+  del fresh.install
+)
 :START
+cls
 if exist dialog.tlk.main goto :INPUTC
 if exist dialog.tlk.port goto :INPUTB
 :INPUTC
@@ -59,16 +68,40 @@ ren dialog.tlk dialog.tlk.main
 ren lips\001EBO_loc.mod 001EBO_loc.mod.main
 ren Modules\001ebo.mod 001ebo.mod.main
 ren StreamMusic\mus_sion.wav mus_sion.wav.main
+
 ren swkotor2.exe swkotor2.exe.main
+
+if exist swupdate.exe goto :KOTOR1B
+if exist DirectX/DSETUP.dll goto :KOTOR1B
+
+:KOTOR1A
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i" "%%i.main"
+goto :KOTOR1C
+:KOTOR1B
+for /f "delims=|" %%i in (port-file-list-disc.txt) do ren "Override\%%i" "%%i.main"
+:KOTOR1C
+
 ren Movies\ObsidianEnt.bik.port ObsidianEnt.bik
 ren dialog.tlk.port dialog.tlk
 ren lips\001EBO_loc.mod.port 001EBO_loc.mod
 ren Modules\001ebo.mod.port 001ebo.mod
 ren StreamMusic\mus_sion.wav.port mus_sion.wav
+
 ren swkotor2.exe.port swkotor2.exe
+
+if exist swupdate.exe goto :KOTOR1E
+if exist DirectX/DSETUP.dll goto :KOTOR1E
+
+:KOTOR1D
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.port" "%%i"
+goto :KOTOR1F
+:KOTOR1E
+for /f "delims=|" %%i in (port-file-list-disc.txt) do ren "Override\%%i.port" "%%i"
+:KOTOR1F
 echo KotOR1 Enabled!
+
+reg add "HKCU\Expanded Galaxy" /v Game /t REG_DWORD /d 1 /f
+
 goto :ENABLE
 :KOTOR2-B
 ren "Movies\ObsidianEnt.bik" "ObsidianEnt.bik.hood"
@@ -114,16 +147,40 @@ ren dialog.tlk dialog.tlk.main
 ren lips\001EBO_loc.mod 001EBO_loc.mod.main
 ren Modules\001ebo.mod 001ebo.mod.main
 ren StreamMusic\mus_sion.wav mus_sion.wav.main
+
 ren swkotor2.exe swkotor2.exe.main
+
+if exist swupdate.exe goto :KOTOR1B
+if exist DirectX/DSETUP.dll goto :KOTOR1B
+
+:KOTOR1A
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i" "%%i.main"
+goto :KOTOR1C
+:KOTOR1B
+for /f "delims=|" %%i in (port-file-list-disc.txt) do ren "Override\%%i" "%%i.main"
+:KOTOR1C
+
 ren Movies\ObsidianEnt.bik.port ObsidianEnt.bik
 ren dialog.tlk.port dialog.tlk
 ren lips\001EBO_loc.mod.port 001EBO_loc.mod
 ren Modules\001ebo.mod.port 001ebo.mod
 ren StreamMusic\mus_sion.wav.port mus_sion.wav
+
 ren swkotor2.exe.port swkotor2.exe
+
+if exist swupdate.exe goto :KOTOR1E
+if exist DirectX/DSETUP.dll goto :KOTOR1E
+
+:KOTOR1D
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.port" "%%i"
+goto :KOTOR1F
+:KOTOR1E
+for /f "delims=|" %%i in (port-file-list-disc.txt) do ren "Override\%%i.port" "%%i"
+:KOTOR1F
 echo KotOR1 Enabled!
+
+reg add "HKCU\Expanded Galaxy" /v Game /t REG_DWORD /d 1 /f
+
 goto :STEAMORDISC
 :KOTOR2-C
 ren Movies\ObsidianEnt.bik ObsidianEnt.bik.port
@@ -131,16 +188,40 @@ ren dialog.tlk dialog.tlk.port
 ren lips\001EBO_loc.mod 001EBO_loc.mod.port
 ren Modules\001ebo.mod 001ebo.mod.port
 ren StreamMusic\mus_sion.wav mus_sion.wav.port
+
 ren swkotor2.exe swkotor2.exe.port
+
+if exist swupdate.exe goto :KOTOR2B
+if exist DirectX/DSETUP.dll goto :KOTOR2B
+
+:KOTOR2A
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i" "%%i.port"
+goto :KOTOR2C
+:KOTOR2B
+for /f "delims=|" %%i in (port-file-list-disc.txt) do ren "Override\%%i" "%%i.port"
+:KOTOR2C
+
 ren Movies\ObsidianEnt.bik.main ObsidianEnt.bik
 ren dialog.tlk.main dialog.tlk
 ren lips\001EBO_loc.mod.main 001EBO_loc.mod
 ren Modules\001ebo.mod.main 001ebo.mod
 ren StreamMusic\mus_sion.wav.main mus_sion.wav
+
 ren swkotor2.exe.main swkotor2.exe
+
+if exist swupdate.exe goto :KOTOR2E
+if exist DirectX/DSETUP.dll goto :KOTOR2E
+
+:KOTOR2D
 for /f "delims=|" %%i in (port-file-list.txt) do ren "Override\%%i.main" "%%i"
+goto :KOTOR2F
+:KOTOR2E
+for /f "delims=|" %%i in (port-file-list-disc.txt) do ren "Override\%%i.main" "%%i"
+:KOTOR2F
 echo KotOR2 Enabled!
+
+reg add "HKCU\Expanded Galaxy" /v Game /t REG_DWORD /d 2 /f
+
 :STEAMORDISC
 echo press any key to play the game. . .
 pause
