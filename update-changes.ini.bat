@@ -11,8 +11,7 @@ del "Expanded Galaxy Hood Installer\tslpatchdata\changes-legacypc.ini"
 del "Expanded Galaxy Hood Installer\tslpatchdata\changes-steam.ini"
 del "Expanded Galaxy Hood Installer\tslpatchdata\changes-switch.ini"
 del "Expanded Galaxy Hood Installer\tslpatchdata\changes-xbox.ini"
-del "Expanded Galaxy Hood Installer\tslpatchdata\changes-macappstore.ini"
-del "Expanded Galaxy Hood Installer\tslpatchdata\changes-macsteam.ini"
+del "Expanded Galaxy Hood Installer\tslpatchdata\changes-mac.ini"
 del "Expanded Galaxy Hood Installer\tslpatchdata\changes-ios.ini"
 
 dir "Expanded Galaxy Hood Installer\tslpatchdata\Override" /b > temp-list.txt
@@ -45,8 +44,7 @@ type changes\changes-legacypc-intro.ini		changes\changes.ini changes\changes-out
 type changes\changes-steam-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-steam.ini"
 type changes\changes-mobile-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-switch.ini"
 type changes\changes-xbox-intro.ini			changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-xbox.ini"
-type changes\changes-macappstore-intro.ini	changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-macappstore.ini"
-type changes\changes-macsteam-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-macsteam.ini"
+type changes\changes-mac-intro.ini			changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-mac.ini"
 type changes\changes-mobile-intro.ini		changes\changes.ini changes\changes-outro.ini	override.txt > "Expanded Galaxy Hood Installer\tslpatchdata\changes-ios.ini"
 
 del override.txt
